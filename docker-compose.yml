@@ -3,8 +3,6 @@ version: '3'
 services:
   db:
     image: mysql:5.7
-    volumes:
-      - wp_db_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: changeme
       MYSQL_DATABASE: wordpress
@@ -23,5 +21,3 @@ services:
      WORDPRESS_DB_HOST: db:3306
      WORDPRESS_DB_USER: wordpress
      WORDPRESS_DB_PASSWORD: wordpress
-volumes:
-    wp_db_data: {}
